@@ -61,4 +61,13 @@ public class ProductController {
         return baseResponseFactory.success("success.product.status.updated");
     }
 
+    @GetMapping("/{id}")
+    public BaseResponse<ProductResponse> getById(@PathVariable Long id) {
+        return baseResponseFactory.success(
+                productMapper.toResponse(
+                        productService.getById(id)
+                )
+        );
+    }
+
 }

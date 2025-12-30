@@ -18,4 +18,5 @@ public interface ProductService {
 
     void updateStatus(Long productId, ProductStatus status);
 
+    Product getById(Long id);
 }
