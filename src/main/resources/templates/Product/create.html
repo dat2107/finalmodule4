@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thêm sản phẩm</title>
+    <link rel="stylesheet" href="/css/product-create.css">
+</head>
+<body>
+<div class="container">
+    <h2>Thêm sản phẩm đấu giá</h2>
+
+    <div class="form-group">
+        <label for="name">Tên sản phẩm</label>
+        <input id="name" type="text" placeholder="Nhập tên sản phẩm...">
+    </div>
+
+    <div class="form-group">
+        <label for="price">Giá bắt đầu</label>
+        <input id="price" type="number" placeholder="Ví dụ: 500000">
+    </div>
+
+    <div class="form-group">
+        <label for="categoryId">Loại sản phẩm</label>
+        <select id="categoryId">
+        </select>
+    </div>
+
+    <div class="button-group">
+        <button class="btn-save" onclick="create()">➕ Thêm sản phẩm</button>
+        <a href="/products" class="btn-back">Quay lại</a>
+    </div>
+</div>
+
+<script src="/js/product-create.js"></script>
+</body>
+</html>

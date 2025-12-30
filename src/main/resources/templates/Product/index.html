@@ -1,0 +1,112 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="vi" xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Quản lý sản phẩm</title>-->
+<!--    <link rel="stylesheet" href="/css/product.css">-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<h2>Quản lý sản phẩm đấu giá</h2>-->
+
+<!--&lt;!&ndash; SEARCH &ndash;&gt;-->
+<!--<div class="search-box">-->
+<!--    <input type="text" id="name" placeholder="Tên sản phẩm">-->
+<!--    <select id="categoryId"></select>-->
+<!--    <input type="number" id="price" placeholder="Giá từ">-->
+<!--    <button onclick="search()">Tìm kiếm</button>-->
+<!--    <button onclick="resetSearch()">Xóa</button>-->
+<!--</div>-->
+
+<!--&lt;!&ndash; ACTION &ndash;&gt;-->
+<!--<div class="actions">-->
+<!--    <a href="/products/create">-->
+<!--        <button>➕ Thêm sản phẩm</button>-->
+<!--    </a>-->
+<!--    <button onclick="deleteSelected()">🗑 Xóa</button>-->
+<!--</div>-->
+
+<!--&lt;!&ndash; TABLE &ndash;&gt;-->
+<!--<table>-->
+<!--    <thead>-->
+<!--    <tr>-->
+<!--        <th><input type="checkbox" onclick="toggleAll(this)"></th>-->
+<!--        <th>ID</th>-->
+<!--        <th>Tên</th>-->
+<!--        <th>Giá</th>-->
+<!--        <th>Loại</th>-->
+<!--        <th>Trạng thái</th>-->
+<!--        <th>Hành Động</th>-->
+<!--    </tr>-->
+<!--    </thead>-->
+<!--    <tbody id="table-body"></tbody>-->
+<!--</table>-->
+
+<!--&lt;!&ndash; PAGINATION &ndash;&gt;-->
+<!--<div class="pagination">-->
+<!--    <button onclick="prevPage()">Trang trước</button>-->
+<!--    <span id="page-info"></span>-->
+<!--    <button onclick="nextPage()">Trang sau</button>-->
+<!--</div>-->
+
+<!--<script src="/js/product.js"></script>-->
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý sản phẩm đấu giá</title>
+    <link rel="stylesheet" href="/css/product.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Quản lý sản phẩm đấu giá</h2>
+
+    <!-- SEARCH -->
+    <div class="search-box">
+        <input type="text" id="name" placeholder="Tên sản phẩm">
+        <select id="categoryId">
+            <option value="">Chọn loại sản phẩm</option>
+        </select>
+        <input type="number" id="price" placeholder="Giá từ">
+        <button onclick="search()">Tìm kiếm</button>
+        <button onclick="resetSearch()">Xóa</button>
+    </div>
+
+    <!-- ACTION -->
+    <div class="actions">
+        <a href="/products/create">
+            <button>➕ Thêm sản phẩm</button>
+        </a>
+        <button onclick="deleteSelected()">🗑 Xóa</button>
+    </div>
+
+    <!-- TABLE -->
+    <table>
+        <thead>
+        <tr>
+            <th><input type="checkbox" onclick="toggleAll(this)"></th>
+            <th>STT</th>
+            <th>Tên</th>
+            <th>Giá</th>
+            <th>Loại</th>
+            <th>Trạng thái</th>
+            <th>Hành động</th>
+        </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+    </table>
+
+    <!-- PAGINATION -->
+    <div class="pagination">
+        <button onclick="prevPage()">Trang trước</button>
+        <span id="page-info"></span>
+        <button onclick="nextPage()">Trang sau</button>
+    </div>
+</div>
+
+<script src="/js/product.js"></script>
+</body>
+</html>

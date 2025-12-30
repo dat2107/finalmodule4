@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Sửa sản phẩm</title>
+    <link rel="stylesheet" href="/css/product-edit.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Sửa sản phẩm</h2>
+
+    <div class="form-group">
+        <label for="name">Tên sản phẩm</label>
+        <input id="name" type="text" readonly>
+    </div>
+
+    <div class="form-group">
+        <label for="price">Giá bắt đầu</label>
+        <input id="price" type="number" readonly>
+    </div>
+
+    <div class="form-group">
+        <label for="category">Loại sản phẩm</label>
+        <input id="category" type="text" readonly>
+    </div>
+
+    <!-- ⭐ PHẦN QUAN TRỌNG: SỬA TRẠNG THÁI -->
+    <div class="form-group">
+        <label for="status">Trạng thái đấu giá</label>
+        <select id="status">
+            <option value="PENDING">Chờ duyệt</option>
+            <option value="APPROVED">Đã duyệt</option>
+            <option value="SOLD">Đã bán</option>
+        </select>
+    </div>
+
+    <div class="button-group">
+        <button class="btn-update" onclick="updateStatus()">Cập nhật</button>
+        <a href="/products" class="btn-back">Quay lại</a>
+    </div>
+</div>
+
+<script src="/js/product-edit.js"></script>
+</body>
+</html>
