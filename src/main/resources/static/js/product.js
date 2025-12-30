@@ -31,11 +31,14 @@ function loadData() {
             const tbody = document.getElementById('table-body');
             tbody.innerHTML = '';
 
-            data.items.forEach(p => {
+            data.items.forEach((p, index) => {
+                const size = 5;
+                const stt = page * size + index + 1;
+
                 tbody.innerHTML += `
                     <tr>
                         <td><input type="checkbox" class="row-check" value="${p.id}"></td>
-                        <td>${p.id}</td>
+                        <td>${stt}</td>
                         <td>${p.name}</td>
                         <td>${p.price}</td>
                         <td>${p.categoryName}</td>
